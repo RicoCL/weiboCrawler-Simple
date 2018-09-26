@@ -127,6 +127,11 @@ class Weibo:
     def weibo_csv_line(self, wb_model):
         # 格式化一条微博的一行CSV数据, 一定要与表头对应
         # "微博id, 微博地址, 发布时间, 微博内容, 话题, 链接, 链接名字, 链接有效性, 点赞, 评论, 转发"
+
+        # 在生成csv之前对可能出现的英文逗号进行转换
+        wb_model.topics_str = wb_model.topics_str.replace(',', '，')
+        wb_model.link_name_str = wb_model.link_name_str.replace(',', '，')
+        wb_model.text_str = wb_model.text_str.replace(',', '，')
         csv_line = (
                 str(wb_model.weibo_id) + ', ' +
                 wb_model.scheme + ', ' +

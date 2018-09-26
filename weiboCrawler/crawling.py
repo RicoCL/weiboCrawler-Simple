@@ -9,7 +9,7 @@ from weiboCrawler import weiboData
 
 # 配置-根据自己需要进行修改
 # 需要爬取的用户的微博id https://weibo.com/u/5203786516?refer_flag=1001030101_
-uid = '5203786516'
+uid = '2305872235'
 
 # 从第几页开始爬取
 page_index = 1
